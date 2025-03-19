@@ -11,11 +11,12 @@
 
 <body class="bg-black">
     <!-- navbar section -->
-    <nav class="bg-gray-900 h-15 border-b-1 border-gray-600">
+    <nav class="bg-gray-900 h-15 border-b border-gray-600 fixed top-0 left-0 w-full z-50">
         <div class="flex place-content-center pt-[7px]">
             <div class="pt-[4px]">
                 <ul class="flex space-x-2">
-                    <li><i
+                    <li>
+                        <i
                             class="fa-brands fa-linkedin-in bg-gray-300 mt-[0.5px] px-[4px] text-3xl rounded-[2px] p-[2px]"></i>
                     </li>
                     <li>
@@ -26,17 +27,17 @@
             </div>
             <div class="pl-20 grid place-content-center cursor-pointer">
                 <ul class="flex space-x-8 pt-1 text-gray-400 text-[12px]">
-                    <li class="flex flex-col hover:text-white pb-1 hover:border-white">
+                    <li class="flex flex-col hover:text-white pb-1">
                         <i class="fa-solid fa-house text-2xl pl-[3px]"></i>
                         <a href="./index.html"><span class="hover:text-white">Home</span></a>
                     </li>
                     <li class="flex flex-col text-white pb-1 border-white border-b-2">
                         <i class="fa-solid fa-users text-2xl pl-[19px]"></i>
-                        <a href="./network.html"><span class="hover:text-white">My Network</span></a>
+                        <a href="#"><span class="hover:text-white">My Network</span></a>
                     </li>
                     <li class="flex flex-col hover:text-white pb-1 hover:border-white">
-                        <i class="fa-solid fa-suitcase text-2xl pl-[0.5px]"></i><a href="#"><span
-                                class="hover:text-white">Jobs</span></a>
+                        <i class="fa-solid fa-suitcase text-2xl pl-[0.5px]"></i>
+                        <a href="#"><span class="hover:text-white">Jobs</span></a>
                     </li>
                     <li class="flex flex-col hover:text-white pb-1 hover:border-white">
                         <i class="fa-solid fa-comments text-2xl pl-[12px]"></i>
@@ -46,9 +47,9 @@
                         <i class="fa-solid fa-bell text-2xl pl-[22px]"></i>
                         <span class="hover:text-white">Notifications</span>
                     </li>
-                    <li class="flex flex-col hover:text-white border-r-1 pr-7 border-gray-600">
+                    <li class="flex flex-col hover:text-white border-r pr-7 border-gray-600">
                         <img src="/img/profile.jpg" alt="profile photo" class="h-6 w-6 rounded-full">
-                        <span class="hover:text-white" style="cursor: pointer;">Me &#9660;</span>
+                        <span class="hover:text-white cursor-pointer">Me &#9660;</span>
                     </li>
                     <li class="flex flex-col hover:text-white hover:border-white">
                         <div class="pl-4">
@@ -56,14 +57,106 @@
                             <i class="fa-solid fa-ellipsis-vertical text-[20px]"></i>
                             <i class="fa-solid fa-ellipsis-vertical text-[20px]"></i>
                         </div>
-                        <span class="hover:text-white" style="cursor: pointer;">Business &#9660;</span>
+                        <span class="hover:text-white cursor-pointer">Business &#9660;</span>
                     </li>
                     <li class="text-amber-400 hover:text-amber-300 text-[11px] text-justify w-25">
-                        <a href="#" style="text-decoration: underline;">Reactivate Premium: 50% Off</a>
+                        <a href="#" class="underline">Reactivate Premium: 50% Off</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
+    <!-- Content below navbar -->
+    <div class="flex place-content-center">
+        <!-- Block-1 -->
+        <div class="flex flex-col gap-y-8">
+            <!-- Manage my Network -->
+            <div class="bg-gray-900 max-w-max mt-21 text-gray-400 rounded-[8px]">
+                <ul class="flex flex-col">
+                    <li class="text-gray-200 font-semibold border-gray-700 border-b-1 px-6 py-3.5">Manage my network</li>
+                    <ul class="font-semibold">
+                        <li class="hover:bg-gray-800 text hover:text-gray-300">
+                            <ul class="flex px-5 py-3 gap-x-23">
+                                <li><i class="fa-solid fa-user-group pr-3.5 text-[17px]"></i><span>Connections</span></li>
+                                <li>1,024</li>
+                            </ul>
+                        </li>
+                        <li class="hover:bg-gray-800 px-5 py-3 hover:text-gray-300"><i class="fa-solid fa-user pr-3.5 text-[17px]"></i><span>Following & followers</span></li>
+                        <li class="hover:bg-gray-800 hover:text-gray-300">
+                            <ul class="flex px-5 py-3 gap-x-36">
+                                <li><i class="fa-solid fa-people-group pr-3.5 text-[19px]"></i><span>Groups</span></li>
+                                <li>20</li>
+                            </ul>
+                        </li>
+                        <li class="hover:bg-gray-800 hover:text-gray-300">
+                            <ul class="flex px-5 py-3 gap-x-41">
+                                <li><i class="fa-solid fa-calendar-days pr-3.5 text-[19px]"></i><span>Events</span></li>
+                                <li>1</li>
+                            </ul>
+                        </li>
+                        <li class="hover:bg-gray-800 hover:text-gray-300">
+                            <ul class="flex px-5 py-3 gap-x-39">
+                                <li><i class="fa-solid fa-file-lines pr-3.5 text-[19px]"></i><span>Pages</span></li>
+                                <li>106</li>
+                            </ul>
+                        </li>
+                        <li class="hover:bg-gray-800 hover:text-gray-300">
+                            <ul class="flex px-5 py-3 gap-x-31">
+                                <li><i class="fa-solid fa-newspaper pr-3.5 text-[19px]"></i><span>Newsletters</span></li>
+                                <li>2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="bg-black rounded-[8px]">
+                <ul class="flex flex-col space-y-2 place-content-center text-[12px] text-gray-500">
+                    <ul class="flex gap-4 place-content-center">
+                        <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">About</li>
+                        <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Accessibility</li>
+                        <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Help Center</li>
+                    </ul>
+                    <ul class="flex gap-4 place-content-center">
+                        <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Privacy & Terms &#9660;
+                        </li>
+                        <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Ad Choices</li>
+                    </ul>
+                    <ul class="flex gap-4 place-content-center">
+                        <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Advertising</li>
+                        <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Business Services &#9660;
+                        </li>
+                    </ul>
+                    <ul class="flex gap-4 place-content-center">
+                        <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Get the LinkedIn app</li>
+                        <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">More</li>
+                    </ul>
+                    <ul class="flex gap-4 place-content-center">
+                        <li>
+                            <span><span class="font-bold text-[12px] mr-0.5 text-white">Linked</span><i
+                        class="fa-brands fa-linkedin-in bg-gray-300 text-black text-[12px] rounded-[2px] p-[2px] mr-1"></i><span
+                        class="text-[12px]">LinkedIn Corporation © 2025</span></span>
+                        </li>
+                    </ul>
+                </ul>
+                
+            </div>
+        </div>
+
+
+
+        <!-- Block-2 -->
+        <div>
+            <!-- Grow and Catchup -->
+            <!-- Invitations -->
+            <!-- Premium -->
+            <!-- people you know -->
+        </div>
+    </div>
+
 </body>
+
 </html>
