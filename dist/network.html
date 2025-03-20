@@ -69,7 +69,7 @@
 
 
     <!-- Content below navbar -->
-    <div class="flex place-content-center">
+    <div class="flex place-content-center gap-6 cursor-pointer">
         <!-- Block-1 -->
         <div class="flex flex-col gap-y-8">
             <!-- Manage my Network -->
@@ -147,13 +147,126 @@
         </div>
 
 
-
         <!-- Block-2 -->
-        <div>
+        <div class="flex flex-col gap-3.5 max-w-max">
             <!-- Grow and Catchup -->
+             <div class="bg-gray-900 mt-21 rounded-[8px] cursor-pointer">
+                <ul class="flex items-start px-6">
+                    <li class="text-green-500 font-semibold py-3.5 px-5 border-b-2 border-green-600 hover:bg-gray-800">Grow</li>
+                    <li class="py-3.5 px-5 font-semibold text-gray-400 hover:bg-gray-800 hover:text-gray-300">Catch up</li>
+                </ul>
+             </div>
+
             <!-- Invitations -->
+            <div class="bg-gray-900 rounded-[8px]">
+                <ul>
+                    <li class="border-b-1 border-gray-700 p-2 cursor-pointer">
+                        <ul class="flex place-content-evenly gap-145">
+                            <li class="text-gray-300 py-1">Invitations (21)</li>
+                            <li class="font-semibold text-gray-300 px-2 py-1 hover:bg-gray-800 rounded-[4px]">Show all</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="flex gap-2.5 px-5 py-3.5 items-center border-b-1 border-gray-700">
+                            <li>
+                                <img src="/img/vansh-bg.png" class="h-17 w-17" alt="example-pic">
+                            </li>
+                            <li class="pr-1.5">
+                                <ul class="flex flex-col place-content-center">
+                                    <li><a href="#" class="font-semibold text-gray-200 hover:underline decoration-2">Vansh Jain</a><span class="text-gray-200"> follows you and is inviting you to connect</span></li>
+                                    <li class="text-[15px] text-gray-400">Android App developer // API // frontend web developer // Nodejs // Rea...</li>
+                                    <li class="text-[12px] text-gray-400"><i class="fa-solid fa-link fa-rotate-by pr-1" style="--fa-rotate-angle: 45deg;"></i><span>patel priyank and 23 other mutual connections</span></li>
+                                </ul>
+                            </li>
+                            <li class="font-semibold max-h-max text-gray-300 px-1.5 py-1 rounded-[4px] hover:bg-gray-800 hover:text-gray-200 cursor-pointer">Ignore</li>
+                            <li class="cursor-pointer text-blue-400 font-semibold rounded-[50px] max-h-max px-4 py-[4px] border-1 hover:bg-blue-950 hover:border-blue-300 hover:text-blue-300">Accept</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="flex gap-2.5 px-5 py-3.5 items-center border-b-1 border-gray-700">
+                            <li>
+                                <img src="/img/prince-bg.png" class="h-17 w-17" alt="example-pic">
+                            </li>
+                            <li class="pr-8.5">
+                                <ul class="flex flex-col place-content-center">
+                                    <li><a href="#" class="font-semibold text-gray-200 hover:underline decoration-2 pr-1">Prince Patel</a><span class="text-gray-200"><i class="fa-regular fa-square-check"></i></span></li>
+                                    <li class="text-[15px] text-gray-400">Student At PDEU | Exploring Computer Science Field | Life-long Learner</li>
+                                    <li class="text-[12px] text-gray-400"><i class="fa-solid fa-link fa-rotate-by pr-1" style="--fa-rotate-angle: 45deg;"></i><span>yug patel and 82 other mutual connections</span></li>
+                                </ul>
+                            </li>
+                            <li class="font-semibold max-h-max text-gray-300 px-1.5 py-1 rounded-[4px] hover:bg-gray-800 hover:text-gray-200 cursor-pointer">Ignore</li>
+                            <li class="cursor-pointer text-blue-400 font-semibold rounded-[50px] max-h-max px-4 py-[4px] border-1 hover:bg-blue-950 hover:border-blue-300 hover:text-blue-300">Accept</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="flex gap-2.5 px-5 py-3.5 items-center">
+                            <li>
+                                <img src="/img/mit-bg.png" class="h-17 w-17" alt="example-pic">
+                            </li>
+                            <li class="pr-1.5">
+                                <ul class="flex flex-col place-content-center">
+                                    <li><a href="#" class="font-semibold text-gray-200 hover:underline decoration-2">Mit Patel</a><span class="text-gray-200"> follows you and is inviting you to connect</span></li>
+                                    <li class="text-[15px] text-gray-400">Computer Science Student | Aspiring Machine Learning & Data Science En...</li>
+                                    <li class="text-[12px] text-gray-400"><i class="fa-solid fa-link fa-rotate-by pr-1" style="--fa-rotate-angle: 45deg;"></i><span>panth patel and 157 other mutual connections</span></li>
+                                </ul>
+                            </li>
+                            <li class="font-semibold max-h-max text-gray-300 px-1.5 py-1 rounded-[4px] hover:bg-gray-800 hover:text-gray-200 cursor-pointer">Ignore</li>
+                            <li class="cursor-pointer text-blue-400 font-semibold rounded-[50px] max-h-max px-4 py-[4px] border-1 hover:bg-blue-950 hover:border-blue-300 hover:text-blue-300">Accept</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
             <!-- Premium -->
+             <div class="bg-gray-900 rounded-[8px]">
+                <ul class="flex flex-col px-5 gap-1.5 py-2">
+                    <li>
+                        <ul class="flex items-center text-gray-200 font-semibold place-content-evenly gap-115">
+                            <li>Job search smarter with Premium</li>
+                            <li><i class="fa-solid fa-xmark text-xl rounded-[40px] hover:bg-gray-800 py-2 px-4"></i></li>
+                        </ul>
+                    </li>
+                    <li class="text-gray-200 text-[13px] pb-1.5">Directly message recruiters with 5 InMail credits per month.</li>
+                    <li class="flex items-center">
+                        <ul class="flex pr-1">
+                            <li><img src="/img/shlok-bg.png" alt="example-pic" class="rounded-full w-8 h-8"></li>
+                            <li class="ml-[-12px]"><img src="/img/priyank-bg.png" alt="example-pic" class="rounded-full w-8 h-8"></li>
+                            <li class="ml-[-12px]"><img src="/img/nitish-bg.png" alt="example-pic" class="rounded-full w-8 h-8"></li>
+                        </ul>
+                        <span class="text-[12px] text-gray-400">nitish and millions of other members use Premium</span>
+                    </li>
+                    <li class="py-3"><button class="rounded-full py-1.5 px-3 bg-orange-300 text-[14px] font-semibold hover:bg-orange-400">Reactivate Premium</button></li>
+                    <li class="text-[12px] text-gray-400 pb-1">Cancel anytime, for any reason.</li>
+                </ul>
+             </div>
+
             <!-- people you know -->
+             <div>
+                <ul>
+                    <li>
+                        <ul class="flex">
+                            <li>People you may know from Pandit Deendayal Energy University (PDEU)</li>
+                            <li>Show all</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+             </div>
         </div>
     </div>
 
