@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/5c4a0b1cae.js" crossorigin="anonymous"></script>
+    <title>Linkedin</title>
+</head>
+
+<body class="bg-black">
+    <!-- navbar section -->
+    <nav class="bg-gray-900 h-15 border-b border-gray-600 fixed top-0 left-0 w-full z-50">
+        <div class="flex place-content-center pt-[7px]">
+            <div class="pt-[4px]">
+                <ul class="flex space-x-2">
+                    <li>
+                        <i
+                            class="fa-brands fa-linkedin-in bg-gray-300 mt-[0.5px] px-[4px] text-3xl rounded-[2px] p-[2px]"></i>
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Search"
+                            class="bg-slate-700 rounded-sm h-9.5 w-70 p-2 px-3 text-gray-200">
+                    </li>
+                </ul>
+            </div>
+            <div class="pl-20 grid place-content-center cursor-pointer">
+                <ul class="flex space-x-8 pt-1 text-gray-400 text-[12px]">
+                    <li class="flex flex-col hover:text-white pb-1">
+                        <i class="fa-solid fa-house text-2xl pl-[3px]"></i>
+                        <a href="./index.html"><span class="hover:text-white">Home</span></a>
+                    </li>
+                    <li class="flex flex-col hover:text-white pb-1">
+                        <i class="fa-solid fa-users text-2xl pl-[19px]"></i>
+                        <a href="./network.html"><span class="hover:text-white">My Network</span></a>
+                    </li>
+                    <li class="flex flex-col hover:text-white pb-1 hover:border-white">
+                        <i class="fa-solid fa-suitcase text-2xl pl-[0.5px]"></i>
+                        <a href="./job.html"><span class="hover:text-white">Jobs</span></a>
+                    </li>
+                    <li class="flex flex-col hover:text-white pb-1 hover:border-white">
+                        <i class="fa-solid fa-comments text-2xl pl-[12px]"></i>
+                        <span class="hover:text-white">Messaging</span>
+                    </li>
+                    <li class="flex flex-col text-white pb-1 border-white border-b-2">
+                        <i class="fa-solid fa-bell text-2xl pl-[22px]"></i>
+                        <a href="./notifications.html"><span class="hover:text-white">Notifications</span></a>
+                    </li>
+                    <li class="flex flex-col hover:text-white border-r pr-7 border-gray-600">
+                        <img src="/img/profile.jpg" alt="profile photo" class="h-6 w-6 rounded-full">
+                        <span class="hover:text-white cursor-pointer">Me &#9660;</span>
+                    </li>
+                    <li class="flex flex-col hover:text-white hover:border-white">
+                        <div class="pl-4">
+                            <i class="fa-solid fa-ellipsis-vertical text-[20px]"></i>
+                            <i class="fa-solid fa-ellipsis-vertical text-[20px]"></i>
+                            <i class="fa-solid fa-ellipsis-vertical text-[20px]"></i>
+                        </div>
+                        <span class="hover:text-white cursor-pointer">Business &#9660;</span>
+                    </li>
+                    <li class="text-amber-400 hover:text-amber-300 text-[11px] text-justify w-25">
+                        <a href="#" class="underline">Reactivate Premium: 50% Off</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Block -->
+    <div class="mt-21 flex place-content-center space-x-6">
+        <!-- block-1 -->
+        <div class="flex flex-col gap-2">
+            <!-- subblock-1 -->
+            <div class="bg-gray-900 w-55 h-58 rounded-[8px] cursor-pointer">
+                <img src="/img/profile-banner.png" alt="profile-banner" class="rounded-t-[8px]">
+                <ul class="mt-[-22px] text-white pl-4 space-y-1">
+                    <li><img src="/img/profile.jpg" alt="profile-photo"
+                            class="h-19 w-19 rounded-full border-white border-[2px]"></li>
+                    <li class="text-xl font-semibold">Ansh Soni</li>
+                    <li class="text-[12px]  pr-3">Ardunio Programming || IBM Qiskit || Python || Mathematics ||
+                        Core...<span class="text-gray-500 flex flex-col">Gandhinagar, Gujarat</span></li>
+                    <li class="text-[12px] font-semibold">
+                        <ul class="flex space-x-1">
+                            <li>
+                                <img src="/img/gfglogo.png" alt="gfglogo" class="w-4 h-4 bg-white rounded-sm p-1">
+                            </li>
+                            <li>GeeksForGeeks - PDEU</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- subblock-2 -->
+            <div class="bg-gray-900 max-w-max max-h-max rounded-[8px] text-[12px]">
+                <ul class="space-y-1.5 px-3.5 py-4">
+                    <li class="text-gray-200 text-[16px] font-semibold">Manage your notifications</li>
+                    <li class="text-[14px] font-semibold text-blue-400 hover:underline hover:decoration-1"><a
+                            href="#">View settings</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- block-2 -->
+        <div class="max-w-[580px] flex flex-col gap-3">
+            <!-- subblock-1 -->
+            <div>
+                <ul class="flex bg-gray-900 rounded-[8px] space-x-2 cursor-pointer p-4.5">
+                    <li
+                        class="font-semibold text-md text-black bg-emerald-400 rounded-full py-1 px-3 hover:bg-emerald-300">
+                        All</li>
+                    <li
+                        class="font-semibold text-md text-gray-300 border-gray-600 border-1 rounded-full hover:text-gray-300 hover:bg-gray-800 py-1 px-3">
+                        Jobs</li>
+                    <li
+                        class="font-semibold text-md text-gray-300 border-gray-600 border-1 rounded-full hover:text-gray-300 hover:bg-gray-800 py-1 px-3">
+                        My posts</li>
+                    <li
+                        class="font-semibold text-md text-gray-300 border-gray-600 border-1 rounded-full hover:text-gray-300 hover:bg-gray-800 py-1 px-3">
+                        Mentions</li>
+                </ul>
+            </div>
+
+
+            <!-- subblock-2 -->
+            <div>
+                <ul class="bg-gray-900 rounded-[8px]">
+                    <!-- element-1 -->
+                    <li>
+                        <ul
+                            class="flex items-start group hover:bg-gray-700 px-6 py-3.5 rounded-t-[8px] border-b-1 border-y-gray-700">
+                            <li class="pr-2">
+                                <img src="/img/yug-bg.png" alt="example pic" class="h-13 w-13">
+                            </li>
+                            <li>
+                                <ul class="text-gray-200 flex flex-col space-y-2">
+                                    <li class="text-[15px]"><span class="font-semibold">Yug Patel</span> and 11 others
+                                        reacted to your post.</li>
+                                    <!-- This <li> remains unchanged inside while the outside still has hover effect -->
+                                    <li
+                                        class="border-1 border-gray-700 rounded-[8px] text-[14px] w-100 py-1.5 px-1 bg-gray-900 group-hover:bg-gray-900">
+                                        ✨ Exploring the Future of Manufacturing! ✨ Hello #Community,
+                                        I hope this post finds you well, ➡️ I'm thril...
+                                    </li>
+                                    <li class="text-[11px] text-gray-400">15 reactions • 2 comments</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="flex flex-col items-end">
+                                    <li class="text-[11px] text-gray-400 pr-1.5">5m</li>
+                                    <li class="text-gray-500 rounded-full hover:text-white hover:bg-gray-600 ml-2.5">
+                                        <i class="fa-solid fa-ellipsis p-2 text-xl"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- element-2 -->
+                    <li>
+                        <ul class="flex items-start group hover:bg-gray-700 px-6 py-3.5 border-b-1 border-y-gray-700">
+                            <li class="pr-2">
+                                <img src="/img/vansh-bg.png" alt="example pic" class="h-13 w-13">
+                            </li>
+                            <li>
+                                <ul class="text-gray-200 flex flex-col space-y-2">
+                                    <li class="text-[15px]"><span class="font-semibold">Vansh Jain</span> and 1 other
+                                        commented to your post.</li>
+                                    <!-- This <li> remains unchanged inside while the outside still has hover effect -->
+                                    <li
+                                        class="border-1 border-gray-700 rounded-[8px] text-[14px] w-100 pt-1.5 bg-gray-900 group-hover:bg-gray-900">
+                                        <ul>
+                                            <li class="px-2 pb-2">Congratulations Ansh Soni 👏👏</li>
+                                            <li class="bg-gray-800 px-1 pb-1.5 rounded-b-[8px]">✨ Exploring the Future
+                                                of Manufacturing! ✨ Hello #Community,
+                                                I hope this post finds you well, ➡️ I'm thril...</li>
+                                        </ul>
+                                    </li>
+                                    <li class="text-[11px] text-gray-400">10 reactions • 2 comments</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="flex flex-col items-end">
+                                    <li class="text-[11px] text-gray-400 pr-1.5">24m</li>
+                                    <li class="text-gray-500 rounded-full hover:text-white hover:bg-gray-600 ml-2.5">
+                                        <i class="fa-solid fa-ellipsis p-2 text-xl"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- element-3 -->
+                    <li>
+                        <ul class="flex items-start group hover:bg-gray-700 px-6 py-3.5 border-b-1 border-y-gray-700">
+                            <li class="pr-2">
+                                <img src="/img/priyank-bg.png" alt="example pic" class="h-13 w-13">
+                            </li>
+                            <li>
+                                <ul class="text-gray-200 flex flex-col space-y-2">
+                                    <li class="text-[15px] w-100"><span class="font-semibold">Priyank Patel</span> and
+                                        21 other people viewed your profile. See the full list with Premium.</li>
+                                    <li><button
+                                            class="text-blue-400 border-2 font-semibold rounded-full py-[3px] px-4 hover:text-blue-300 hover:border-blue-300 hover:bg-gray-700">Reactivate
+                                            Premium</button></li>
+                                    <li class="text-[11px] text-gray-400">Cancel anytime, for any reason.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="flex flex-col items-end">
+                                    <li class="text-[11px] text-gray-400 pr-1.5">50m</li>
+                                    <li class="text-gray-500 rounded-full hover:text-white hover:bg-gray-600 ml-2.5">
+                                        <i class="fa-solid fa-ellipsis p-2 text-xl"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- element-4 -->
+                    <li>
+                        <ul class="flex items-start group hover:bg-gray-700 px-6 py-3.5 border-b-1 border-y-gray-700">
+                            <li class="pr-2">
+                                <img src="/img/nitish-bg.png" alt="example pic" class="h-13 w-13">
+                            </li>
+                            <li class="text-[15px] w-100 text-gray-200"><span class="font-semibold">Nitish
+                                    Talpada</span> posted: Hello 👋 #connections, I am thrilled to announce that...</li>
+                            <li>
+                                <ul class="flex flex-col items-end">
+                                    <li class="text-[11px] text-gray-400 pr-1.5">1h</li>
+                                    <li class="text-gray-500 rounded-full hover:text-white hover:bg-gray-600 ml-2.5">
+                                        <i class="fa-solid fa-ellipsis p-2 text-xl"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- element-5 -->
+                    <li>
+                        <ul class="flex items-start group hover:bg-gray-700 px-6 py-3.5 border-b-1 border-y-gray-700">
+                            <li class="pr-2">
+                                <img src="/img/mit-bg.png" alt="example pic" class="h-13 w-13">
+                            </li>
+                            <li>
+                                <ul class="text-gray-200 flex flex-col space-y-2">
+                                    <li class="text-[15px] w-100">Congratulate <span class="font-semibold">Mit
+                                            Patel</span> on a new position at <span
+                                            class="font-semibold">Microsoft</span>. View more network updates.</li>
+                                    <li><button
+                                            class="text-blue-400 border-2 font-semibold rounded-full py-[3px] px-4 hover:text-blue-300 hover:border-blue-300 hover:bg-gray-700">Say
+                                            Congrat</button></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="flex flex-col items-end">
+                                    <li class="text-[11px] text-gray-400 pr-1.5">1h</li>
+                                    <li class="text-gray-500 rounded-full hover:text-white hover:bg-gray-600 ml-2.5">
+                                        <i class="fa-solid fa-ellipsis p-2 text-xl"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- element-6 -->
+                    <li>
+                        <ul class="flex items-start group hover:bg-gray-700 px-6 py-3.5 border-b-1 border-y-gray-700">
+                            <li class="pr-2">
+                                <img src="/img/prince-bg.png" alt="example pic" class="h-13 w-13">
+                            </li>
+                            <li>
+                                <ul class="text-gray-200 flex flex-col space-y-2">
+                                    <li class="text-[15px]"><span class="font-semibold">Prince Patel</span> and 21
+                                        others reacted to <span class="font-semibold">Panth Patel's</span> post.</li>
+                                    <!-- This <li> remains unchanged inside while the outside still has hover effect -->
+                                    <li
+                                        class="border-1 border-gray-700 rounded-[8px] text-[14px] w-100 pt-1.5 bg-gray-900 group-hover:bg-gray-900">
+                                        <ul>
+                                            <li class="px-2 pb-2">Keep Going Panth Patel ✨</li>
+                                            <li class="bg-gray-800 px-1 pb-1.5 rounded-b-[8px]">🌐 Exploring the Power
+                                                of Cloud Computing! 🌐 Hello #connections,
+                                                I hope this post finds you well, I'm thrilled...</li>
+                                        </ul>
+                                    </li>
+                                    <li class="text-[11px] text-gray-400">22 reactions • 10 comments</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="flex flex-col items-end">
+                                    <li class="text-[11px] text-gray-400 pr-1.5">2h</li>
+                                    <li class="text-gray-500 rounded-full hover:text-white hover:bg-gray-600 ml-2.5">
+                                        <i class="fa-solid fa-ellipsis p-2 text-xl"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- element-7 -->
+                    <li>
+                        <ul class="flex items-start group hover:bg-gray-700 px-6 py-3.5 border-b-1 border-y-gray-700">
+                            <li class="pr-2">
+                                <img src="/img/comp-logo/comp-logo-3.png" alt="example pic" class="h-13 w-13">
+                            </li>
+                            <li>
+                                <ul class="text-gray-200 flex flex-col space-y-2">
+                                    <li class="text-[15px] w-100"><span class="font-semibold">python developer:
+                                            30+</span> opportunities in <span class="font-semibold">India</span></li>
+                                    <li><button
+                                            class="text-blue-400 border-2 font-semibold rounded-full py-[3px] px-4 hover:text-blue-300 hover:border-blue-300 hover:bg-gray-700">View
+                                            jobs</button></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="flex flex-col items-end">
+                                    <li class="text-[11px] text-gray-400 pr-1.5">2h</li>
+                                    <li class="text-gray-500 rounded-full hover:text-white hover:bg-gray-600 ml-2.5">
+                                        <i class="fa-solid fa-ellipsis p-2 text-xl"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- element-8 -->
+                    <li>
+                        <ul class="flex items-start group hover:bg-gray-700 px-6 py-3.5 border-b-1 border-y-gray-700 rounded-b-[8px]">
+                            <li class="pr-2">
+                                <img src="/img/shlok-bg.png" alt="example pic" class="h-13 w-13">
+                            </li>
+                            <li class="text-[15px] w-100 text-gray-200"><span class="font-semibold">Shlok
+                                    Patel</span> posted: Hello #developers, I am excited to shared that the...</li>
+                            <li>
+                                <ul class="flex flex-col items-end">
+                                    <li class="text-[11px] text-gray-400 pr-1.5">3h</li>
+                                    <li class="text-gray-500 rounded-full hover:text-white hover:bg-gray-600 ml-2.5">
+                                        <i class="fa-solid fa-ellipsis p-2 text-xl"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- block-3 -->
+        <!-- Quick links -->
+        <div class="bg-black rounded-[8px]">
+            <ul class="flex flex-col space-y-2 place-content-center text-[12px] text-gray-500">
+                <ul class="flex gap-4 place-content-center">
+                    <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">About</li>
+                    <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Accessibility</li>
+                    <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Help Center</li>
+                </ul>
+                <ul class="flex gap-4 place-content-center">
+                    <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Privacy & Terms &#9660;
+                    </li>
+                    <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Ad Choices</li>
+                </ul>
+                <ul class="flex gap-4 place-content-center">
+                    <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Advertising</li>
+                    <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Business Services
+                        &#9660;
+                    </li>
+                </ul>
+                <ul class="flex gap-4 place-content-center">
+                    <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">Get the LinkedIn app
+                    </li>
+                    <li class="max-w-max hover:underline hover:text-blue-400 cursor-pointer">More</li>
+                </ul>
+                <ul class="flex gap-4 place-content-center">
+                    <li>
+                        <span><span class="font-bold text-[12px] mr-0.5 text-white">Linked</span><i
+                                class="fa-brands fa-linkedin-in bg-gray-300 text-black text-[12px] rounded-[2px] p-[2px] mr-1"></i><span
+                                class="text-[12px]">LinkedIn Corporation © 2025</span></span>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
