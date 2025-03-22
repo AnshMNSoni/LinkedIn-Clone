@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/5c4a0b1cae.js" crossorigin="anonymous"></script>
     <title>Linkedin</title>
 </head>
@@ -47,10 +48,70 @@
                         <i class="fa-solid fa-bell text-2xl pl-[22px]"></i>
                         <a href="./notifications.html"><span class="hover:text-white">Notifications</span></a>
                     </li>
-                    <li class="flex flex-col hover:text-white border-r pr-7 border-gray-600">
-                        <img src="/img/profile.jpg" alt="profile photo" class="h-6 w-6 rounded-full">
-                        <span class="hover:text-white cursor-pointer">Me &#9660;</span>
+                    
+                    <!-- Profile Dropdown -->
+                    <li class="relative flex flex-col hover:text-white border-r pr-7 border-gray-600"
+                        x-data="{ open: false }">
+                        <div class="flex flex-col items-center cursor-pointer" @click="open = !open">
+                            <img src="/img/profile.jpg" alt="profile photo" class="h-6 w-6 rounded-full">
+                            <span class="hover:text-white">Me &#9660;</span>
+                        </div>
+
+                        <!-- Dropdown Menu -->
+                        <div x-show="open" @click.away="open = false"
+                            class="absolute right-0 mt-14 w-62 bg-gray-900 text-white rounded-lg shadow-lg p-2.5 border border-gray-700"
+                            x-transition>
+
+                            <!-- Profile Section -->
+                            <div class="flex items-start space-x-3">
+                                <img src="/img/profile.jpg" alt="Profile Photo"
+                                    class="h-12 w-12 rounded-full border border-gray-500">
+                                <div>
+                                    <h1 class="text-[17px] font-seimbold">Ansh Soni</h1>
+                                    <p class="text-xs text-gray-300">
+                                        Ardunio Programming || IBM Qiskit || Python || Mathematics || Core Member
+                                        @GeeksforGeeks-PDEU || Computer Engineering @ PDEU'27 || 🏅 Reliance Foundation
+                                        Undergraduate Scholar
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button
+                                class="w-full mt-3 text-blue-400 text-[15px] border-2 border-blue-400 font-semibold rounded-full hover:border-blue-300 hover:text-blue-300 hover:bg-gray-800">View
+                                Profile</button>
+
+                            <!-- Account Section -->
+                            <div class="mt-4 border-t border-gray-600 pt-2 pl-2">
+                                <ul class="flex flex-col space-y-1">
+                                    <li class="text-lg font-semibold">Account</li>
+                                    <li class="text-gray-400 font-semibold hover:font-semibold hover:text-blue-400"><i
+                                            class="fa-solid fa-square text-amber-400 pr-1.5"></i>Get hired faster with
+                                        Premium</li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Settings & Privacy</a></li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Help</a></li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Language</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Manage Section -->
+                            <div class="mt-4 border-t border-gray-600 pt-2 pl-2">
+                                <ul class="flex flex-col space-y-1">
+                                    <li class="text-lg font-semibold">Manage</li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Posts & Activity</a></li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Job Posting Account</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Sign Out -->
+                            <p class="mt-3 text-[14px] border-t border-gray-600 pt-2 pl-2 text-gray-400 cursor-pointer hover:text-gray-300">Sign Out</p>
+                        </div>
                     </li>
+
                     <li class="flex flex-col hover:text-white hover:border-white">
                         <div class="pl-4">
                             <i class="fa-solid fa-ellipsis-vertical text-[20px]"></i>

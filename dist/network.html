@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/5c4a0b1cae.js" crossorigin="anonymous"></script>
     <title>Linkedin</title>
 </head>
@@ -47,10 +48,72 @@
                         <i class="fa-solid fa-bell text-2xl pl-[22px]"></i>
                         <a href="./notifications.html"><span class="hover:text-white">Notifications</span></a>
                     </li>
-                    <li class="flex flex-col hover:text-white border-r pr-7 border-gray-600">
-                        <img src="/img/profile.jpg" alt="profile photo" class="h-6 w-6 rounded-full">
-                        <span class="hover:text-white cursor-pointer">Me &#9660;</span>
+
+                    <!-- Profile Dropdown -->
+                    <li class="relative flex flex-col hover:text-white border-r pr-7 border-gray-600"
+                        x-data="{ open: false }">
+                        <div class="flex flex-col items-center cursor-pointer" @click="open = !open">
+                            <img src="/img/profile.jpg" alt="profile photo" class="h-6 w-6 rounded-full">
+                            <span class="hover:text-white">Me &#9660;</span>
+                        </div>
+
+                        <!-- Dropdown Menu -->
+                        <div x-show="open" @click.away="open = false"
+                            class="absolute right-0 mt-14 w-62 bg-gray-900 text-white rounded-lg shadow-lg p-2.5 border border-gray-700"
+                            x-transition>
+
+                            <!-- Profile Section -->
+                            <div class="flex items-start space-x-3">
+                                <img src="/img/profile.jpg" alt="Profile Photo"
+                                    class="h-12 w-12 rounded-full border border-gray-500">
+                                <div>
+                                    <h1 class="text-[17px] font-seimbold">Ansh Soni</h1>
+                                    <p class="text-xs text-gray-300">
+                                        Ardunio Programming || IBM Qiskit || Python || Mathematics || Core Member
+                                        @GeeksforGeeks-PDEU || Computer Engineering @ PDEU'27 || 🏅 Reliance Foundation
+                                        Undergraduate Scholar
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button
+                                class="w-full mt-3 text-blue-400 text-[15px] border-2 border-blue-400 font-semibold rounded-full hover:border-blue-300 hover:text-blue-300 hover:bg-gray-800">View
+                                Profile</button>
+
+                            <!-- Account Section -->
+                            <div class="mt-4 border-t border-gray-600 pt-2 pl-2">
+                                <ul class="flex flex-col space-y-1">
+                                    <li class="text-lg font-semibold">Account</li>
+                                    <li class="text-gray-400 font-semibold hover:font-semibold hover:text-blue-400"><i
+                                            class="fa-solid fa-square text-amber-400 pr-1.5"></i>Get hired faster with
+                                        Premium</li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Settings & Privacy</a></li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Help</a></li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Language</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Manage Section -->
+                            <div class="mt-4 border-t border-gray-600 pt-2 pl-2">
+                                <ul class="flex flex-col space-y-1">
+                                    <li class="text-lg font-semibold">Manage</li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Posts & Activity</a></li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Job Posting Account</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Sign Out -->
+                            <p
+                                class="mt-3 text-[14px] border-t border-gray-600 pt-2 pl-2 text-gray-400 cursor-pointer hover:text-gray-300">
+                                Sign Out</p>
+                        </div>
                     </li>
+
                     <li class="flex flex-col hover:text-white hover:border-white">
                         <div class="pl-4">
                             <i class="fa-solid fa-ellipsis-vertical text-[20px]"></i>
@@ -157,7 +220,8 @@
             <!-- Grow and Catchup -->
             <div class="bg-gray-900 mt-21 rounded-[8px] cursor-pointer">
                 <ul class="flex items-start px-6">
-                    <li class="text-emerald-400 font-semibold py-3.5 px-5 border-b-2 border-emerald-500 hover:bg-gray-800">
+                    <li
+                        class="text-emerald-400 font-semibold py-3.5 px-5 border-b-2 border-emerald-500 hover:bg-gray-800">
                         Grow</li>
                     <li class="py-3.5 px-5 font-semibold text-gray-400 hover:bg-gray-800 hover:text-gray-300">Catch up
                     </li>
@@ -264,7 +328,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="text-gray-200 text-[13px] pb-1.5">See who's viewed your profile and message recruiters with 5 InMail credits per month.</li>
+                    <li class="text-gray-200 text-[13px] pb-1.5">See who's viewed your profile and message recruiters
+                        with 5 InMail credits per month.</li>
                     <li class="flex items-center">
                         <ul class="flex pr-1">
                             <li><img src="/img/shlok-bg.png" alt="example-pic" class="rounded-full w-8 h-8"></li>
@@ -287,42 +352,51 @@
                 <ul class="flex flex-col gap-3">
                     <li class="pt-2">
                         <ul class="flex place-content-evenly gap-65">
-                            <li class="text-gray-200 py-1">People you may know from Pandit Deendayal Energy University (PDEU)</li>
-                            <li class="text-gray-300 font-semibold hover:bg-gray-800 px-1.5 py-1 rounded-[4px] hover:text-gray-200">Show all</li>
+                            <li class="text-gray-200 py-1">People you may know from Pandit Deendayal Energy University
+                                (PDEU)</li>
+                            <li
+                                class="text-gray-300 font-semibold hover:bg-gray-800 px-1.5 py-1 rounded-[4px] hover:text-gray-200">
+                                Show all</li>
                         </ul>
                     </li>
                     <li>
                         <!-- first row of 4 -->
                         <ul class="flex space-x-2">
                             <li>
-                                <div class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
+                                <div
+                                    class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
                                     <!-- Close Button -->
-                                    <button class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
+                                    <button
+                                        class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
                                         <i class="fa-solid fa-x text-white text-sm"></i>
                                     </button>
-                                
+
                                     <!-- Profile Banner -->
                                     <div>
-                                        <img src="/img/banners/nitish-banner.png" alt="Banner Image" class="w-full h-[70px] object-cover">
+                                        <img src="/img/banners/nitish-banner.png" alt="Banner Image"
+                                            class="w-full h-[70px] object-cover">
                                     </div>
-                                
+
                                     <!-- Profile Image (Overlapping) -->
                                     <div class="flex justify-center -mt-[40px]">
-                                        <img src="/img/nitish-bg.png" alt="Profile Picture" class="h-27 w-27 rounded-full border-4 border-gray-900">
+                                        <img src="/img/nitish-bg.png" alt="Profile Picture"
+                                            class="h-27 w-27 rounded-full border-4 border-gray-900">
                                     </div>
-                                
+
                                     <!-- User Information -->
                                     <div class="text-center mt-2">
                                         <p class="text-md font-semibold">Nitish Talpada</p>
-                                        <p class="text-sm text-gray-300 px-3">CSE Sophomore | @PDEU | Competitive Progra...</p>
+                                        <p class="text-sm text-gray-300 px-3">CSE Sophomore | @PDEU | Competitive
+                                            Progra...</p>
                                     </div>
-                                
+
                                     <!-- Mutual Connections -->
                                     <div class="flex items-center justify-center mt-2 space-x-2 text-gray-400">
-                                        <span class="pl-3"><img src="/img/prince-bg.png" alt="Mutual Connection" class="h-7 w-8 rounded-full"></span>
+                                        <span class="pl-3"><img src="/img/prince-bg.png" alt="Mutual Connection"
+                                                class="h-7 w-8 rounded-full"></span>
                                         <span class="text-[11px]">Prince and 206 other mutual connections</span>
                                     </div>
-                                
+
                                     <!-- Connect Button -->
                                     <div class="flex justify-center my-3">
                                         <button class="flex items-center space-x-2 text-[14px] text-blue-400 border-1 border-blue-400 px-9 py-1.5 rounded-full 
@@ -334,34 +408,40 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
+                                <div
+                                    class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
                                     <!-- Close Button -->
-                                    <button class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
+                                    <button
+                                        class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
                                         <i class="fa-solid fa-x text-white text-sm"></i>
                                     </button>
-                                
+
                                     <!-- Profile Banner -->
                                     <div>
-                                        <img src="/img/banners/panth-banner.png" alt="Banner Image" class="w-full h-[70px] object-cover">
+                                        <img src="/img/banners/panth-banner.png" alt="Banner Image"
+                                            class="w-full h-[70px] object-cover">
                                     </div>
-                                
+
                                     <!-- Profile Image (Overlapping) -->
                                     <div class="flex justify-center -mt-[40px]">
-                                        <img src="/img/panth-bg.png" alt="Profile Picture" class="h-27 w-27 rounded-full border-4 border-gray-900">
+                                        <img src="/img/panth-bg.png" alt="Profile Picture"
+                                            class="h-27 w-27 rounded-full border-4 border-gray-900">
                                     </div>
-                                
+
                                     <!-- User Information -->
                                     <div class="text-center mt-2">
                                         <p class="text-md font-semibold">Panth Patel</p>
-                                        <p class="text-sm text-gray-300 px-3">Pursuing CSE at Pandit Deendayal Energy Univer...</p>
+                                        <p class="text-sm text-gray-300 px-3">Pursuing CSE at Pandit Deendayal Energy
+                                            Univer...</p>
                                     </div>
-                                
+
                                     <!-- Mutual Connections -->
                                     <div class="flex items-center justify-center mt-2 space-x-2 text-gray-400">
-                                        <span class="pl-3"><img src="/img/priyank-bg.png" alt="Mutual Connection" class="h-6 w-8 rounded-full"></span>
+                                        <span class="pl-3"><img src="/img/priyank-bg.png" alt="Mutual Connection"
+                                                class="h-6 w-8 rounded-full"></span>
                                         <span class="text-[11px]">Priyank and 76 other mutual connections</span>
                                     </div>
-                                
+
                                     <!-- Connect Button -->
                                     <div class="flex justify-center my-3">
                                         <button class="flex items-center space-x-2 text-[14px] text-blue-400 border-1 border-blue-400 px-9 py-1.5 rounded-full 
@@ -373,34 +453,40 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
+                                <div
+                                    class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
                                     <!-- Close Button -->
-                                    <button class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
+                                    <button
+                                        class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
                                         <i class="fa-solid fa-x text-white text-sm"></i>
                                     </button>
-                                
+
                                     <!-- Profile Banner -->
                                     <div>
-                                        <img src="/img/banners/shlok-banner.png" alt="Banner Image" class="w-full h-[70px] object-cover">
+                                        <img src="/img/banners/shlok-banner.png" alt="Banner Image"
+                                            class="w-full h-[70px] object-cover">
                                     </div>
-                                
+
                                     <!-- Profile Image (Overlapping) -->
                                     <div class="flex justify-center -mt-[40px]">
-                                        <img src="/img/shlok-bg.png" alt="Profile Picture" class="h-27 w-27 rounded-full border-4 border-gray-900">
+                                        <img src="/img/shlok-bg.png" alt="Profile Picture"
+                                            class="h-27 w-27 rounded-full border-4 border-gray-900">
                                     </div>
-                                
+
                                     <!-- User Information -->
                                     <div class="text-center mt-2">
                                         <p class="text-md font-semibold">Shlok Patel</p>
-                                        <p class="text-sm text-gray-300 px-3">Attended Pandit Deendayal Energy University</p>
+                                        <p class="text-sm text-gray-300 px-3">Attended Pandit Deendayal Energy
+                                            University</p>
                                     </div>
-                                
+
                                     <!-- Mutual Connections -->
                                     <div class="flex items-center justify-center mt-2 space-x-2 text-gray-400">
-                                        <span class="pl-3"><img src="/img/vansh-bg.png" alt="Mutual Connection" class="h-6 w-8 rounded-full"></span>
+                                        <span class="pl-3"><img src="/img/vansh-bg.png" alt="Mutual Connection"
+                                                class="h-6 w-8 rounded-full"></span>
                                         <span class="text-[11px]">Vansh and 117 other mutual connections</span>
                                     </div>
-                                
+
                                     <!-- Connect Button -->
                                     <div class="flex justify-center my-3">
                                         <button class="flex items-center space-x-2 text-[14px] text-blue-400 border-1 border-blue-400 px-9 py-1.5 rounded-full 
@@ -412,34 +498,40 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
+                                <div
+                                    class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
                                     <!-- Close Button -->
-                                    <button class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
+                                    <button
+                                        class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
                                         <i class="fa-solid fa-x text-white text-sm"></i>
                                     </button>
-                                
+
                                     <!-- Profile Banner -->
                                     <div>
-                                        <img src="/img/banners/shlok-banner.png" alt="Banner Image" class="w-full h-[70px] object-cover">
+                                        <img src="/img/banners/shlok-banner.png" alt="Banner Image"
+                                            class="w-full h-[70px] object-cover">
                                     </div>
-                                
+
                                     <!-- Profile Image (Overlapping) -->
                                     <div class="flex justify-center -mt-[40px]">
-                                        <img src="/img/yug-bg.png" alt="Profile Picture" class="h-27 w-27 rounded-full border-4 border-gray-900">
+                                        <img src="/img/yug-bg.png" alt="Profile Picture"
+                                            class="h-27 w-27 rounded-full border-4 border-gray-900">
                                     </div>
-                                
+
                                     <!-- User Information -->
                                     <div class="text-center mt-2">
                                         <p class="text-md font-semibold">Yug Patel</p>
-                                        <p class="text-sm text-gray-300 px-3">Future AI/ML Specialist | Frontend Developer...</p>
+                                        <p class="text-sm text-gray-300 px-3">Future AI/ML Specialist | Frontend
+                                            Developer...</p>
                                     </div>
-                                
+
                                     <!-- Mutual Connections -->
                                     <div class="flex items-center justify-center mt-2 space-x-2 text-gray-400">
-                                        <span class="pl-3"><img src="/img/nitish-bg.png" alt="Mutual Connection" class="h-6 w-8 rounded-full"></span>
+                                        <span class="pl-3"><img src="/img/nitish-bg.png" alt="Mutual Connection"
+                                                class="h-6 w-8 rounded-full"></span>
                                         <span class="text-[11px]">Nitish and 96 other mutual connections</span>
                                     </div>
-                                
+
                                     <!-- Connect Button -->
                                     <div class="flex justify-center my-3">
                                         <button class="flex items-center space-x-2 text-[14px] text-blue-400 border-1 border-blue-400 px-9 py-1.5 rounded-full 
@@ -458,34 +550,40 @@
                         <!-- 2nd row of 4 -->
                         <ul class="flex space-x-2">
                             <li>
-                                <div class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
+                                <div
+                                    class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
                                     <!-- Close Button -->
-                                    <button class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
+                                    <button
+                                        class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
                                         <i class="fa-solid fa-x text-white text-sm"></i>
                                     </button>
-                                
+
                                     <!-- Profile Banner -->
                                     <div>
-                                        <img src="/img/banners/priyank-banner.png" alt="Banner Image" class="w-full h-[70px] object-cover">
+                                        <img src="/img/banners/priyank-banner.png" alt="Banner Image"
+                                            class="w-full h-[70px] object-cover">
                                     </div>
-                                
+
                                     <!-- Profile Image (Overlapping) -->
                                     <div class="flex justify-center -mt-[40px]">
-                                        <img src="/img/priyank-bg.png" alt="Profile Picture" class="h-27 w-27 rounded-full border-4 border-gray-900">
+                                        <img src="/img/priyank-bg.png" alt="Profile Picture"
+                                            class="h-27 w-27 rounded-full border-4 border-gray-900">
                                     </div>
-                                
+
                                     <!-- User Information -->
                                     <div class="text-center mt-2">
                                         <p class="text-md font-semibold">Priyank</p>
-                                        <p class="text-sm text-gray-300 px-3">🏆 Hackathon Runner's Up @ACM | GUI | HTML...</p>
+                                        <p class="text-sm text-gray-300 px-3">🏆 Hackathon Runner's Up @ACM | GUI |
+                                            HTML...</p>
                                     </div>
-                                
+
                                     <!-- Mutual Connections -->
                                     <div class="flex items-center justify-center mt-2 space-x-2 text-gray-400">
-                                        <span class="pl-3"><img src="/img/mit-bg.png" alt="Mutual Connection" class="h-7 w-8 rounded-full"></span>
+                                        <span class="pl-3"><img src="/img/mit-bg.png" alt="Mutual Connection"
+                                                class="h-7 w-8 rounded-full"></span>
                                         <span class="text-[11px]">Mit and 182 other mutual connections</span>
                                     </div>
-                                
+
                                     <!-- Connect Button -->
                                     <div class="flex justify-center my-3">
                                         <button class="flex items-center space-x-2 text-[14px] text-blue-400 border-1 border-blue-400 px-9 py-1.5 rounded-full 
@@ -497,34 +595,40 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
+                                <div
+                                    class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
                                     <!-- Close Button -->
-                                    <button class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
+                                    <button
+                                        class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
                                         <i class="fa-solid fa-x text-white text-sm"></i>
                                     </button>
-                                
+
                                     <!-- Profile Banner -->
                                     <div>
-                                        <img src="/img/banners/prince-banner.png" alt="Banner Image" class="w-full h-[70px] object-cover">
+                                        <img src="/img/banners/prince-banner.png" alt="Banner Image"
+                                            class="w-full h-[70px] object-cover">
                                     </div>
-                                
+
                                     <!-- Profile Image (Overlapping) -->
                                     <div class="flex justify-center -mt-[40px]">
-                                        <img src="/img/prince-bg.png" alt="Profile Picture" class="h-27 w-27 rounded-full border-4 border-gray-900">
+                                        <img src="/img/prince-bg.png" alt="Profile Picture"
+                                            class="h-27 w-27 rounded-full border-4 border-gray-900">
                                     </div>
-                                
+
                                     <!-- User Information -->
                                     <div class="text-center mt-2">
                                         <p class="text-md font-semibold">Prince Patel</p>
-                                        <p class="text-sm text-gray-300 px-3">Student At PDEU | Exploring Computer Science Fie...</p>
+                                        <p class="text-sm text-gray-300 px-3">Student At PDEU | Exploring Computer
+                                            Science Fie...</p>
                                     </div>
-                                
+
                                     <!-- Mutual Connections -->
                                     <div class="flex items-center justify-center mt-2 space-x-2 text-gray-400">
-                                        <span class="pl-3"><img src="/img/yug-bg.png" alt="Mutual Connection" class="h-6 w-8 rounded-full"></span>
+                                        <span class="pl-3"><img src="/img/yug-bg.png" alt="Mutual Connection"
+                                                class="h-6 w-8 rounded-full"></span>
                                         <span class="text-[11px]">Yug and 56 other mutual connections</span>
                                     </div>
-                                
+
                                     <!-- Connect Button -->
                                     <div class="flex justify-center my-3">
                                         <button class="flex items-center space-x-2 text-[14px] text-blue-400 border-1 border-blue-400 px-9 py-1.5 rounded-full 
@@ -536,34 +640,40 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
+                                <div
+                                    class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
                                     <!-- Close Button -->
-                                    <button class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
+                                    <button
+                                        class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
                                         <i class="fa-solid fa-x text-white text-sm"></i>
                                     </button>
-                                
+
                                     <!-- Profile Banner -->
                                     <div>
-                                        <img src="/img/banners/mit-banner.png" alt="Banner Image" class="w-full h-[70px] object-cover">
+                                        <img src="/img/banners/mit-banner.png" alt="Banner Image"
+                                            class="w-full h-[70px] object-cover">
                                     </div>
-                                
+
                                     <!-- Profile Image (Overlapping) -->
                                     <div class="flex justify-center -mt-[40px]">
-                                        <img src="/img/mit-bg.png" alt="Profile Picture" class="h-27 w-27 rounded-full border-4 border-gray-900">
+                                        <img src="/img/mit-bg.png" alt="Profile Picture"
+                                            class="h-27 w-27 rounded-full border-4 border-gray-900">
                                     </div>
-                                
+
                                     <!-- User Information -->
                                     <div class="text-center mt-2">
                                         <p class="text-md font-semibold">Mit Patel</p>
-                                        <p class="text-sm text-gray-300 px-3">Computer Science Student | Aspiring Machine Learn...</p>
+                                        <p class="text-sm text-gray-300 px-3">Computer Science Student | Aspiring
+                                            Machine Learn...</p>
                                     </div>
-                                
+
                                     <!-- Mutual Connections -->
                                     <div class="flex items-center justify-center mt-2 space-x-2 text-gray-400">
-                                        <span class="pl-3"><img src="/img/panth-bg.png" alt="Mutual Connection" class="h-6 w-8 rounded-full"></span>
+                                        <span class="pl-3"><img src="/img/panth-bg.png" alt="Mutual Connection"
+                                                class="h-6 w-8 rounded-full"></span>
                                         <span class="text-[11px]">Panth and 120 other mutual connections</span>
                                     </div>
-                                
+
                                     <!-- Connect Button -->
                                     <div class="flex justify-center my-3">
                                         <button class="flex items-center space-x-2 text-[14px] text-blue-400 border-1 border-blue-400 px-9 py-1.5 rounded-full 
@@ -575,34 +685,40 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
+                                <div
+                                    class="relative bg-gray-900 text-white max-w-[205px] rounded-xl border-1 border-gray-700 overflow-hidden shadow-lg">
                                     <!-- Close Button -->
-                                    <button class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
+                                    <button
+                                        class="absolute top-2 right-2 bg-gray-800 py-1 px-2.5 rounded-full hover:bg-gray-700">
                                         <i class="fa-solid fa-x text-white text-sm"></i>
                                     </button>
-                                
+
                                     <!-- Profile Banner -->
                                     <div>
-                                        <img src="/img/banners/shlok-banner.png" alt="Banner Image" class="w-full h-[70px] object-cover">
+                                        <img src="/img/banners/shlok-banner.png" alt="Banner Image"
+                                            class="w-full h-[70px] object-cover">
                                     </div>
-                                
+
                                     <!-- Profile Image (Overlapping) -->
                                     <div class="flex justify-center -mt-[40px]">
-                                        <img src="/img/vansh-bg.png" alt="Profile Picture" class="h-27 w-27 rounded-full border-4 border-gray-900">
+                                        <img src="/img/vansh-bg.png" alt="Profile Picture"
+                                            class="h-27 w-27 rounded-full border-4 border-gray-900">
                                     </div>
-                                
+
                                     <!-- User Information -->
                                     <div class="text-center mt-2">
                                         <p class="text-md font-semibold">Vansh Jain</p>
-                                        <p class="text-sm text-gray-300 px-3">Android App developer // API // frontend...</p>
+                                        <p class="text-sm text-gray-300 px-3">Android App developer // API //
+                                            frontend...</p>
                                     </div>
-                                
+
                                     <!-- Mutual Connections -->
                                     <div class="flex items-center justify-center mt-2 space-x-2 text-gray-400">
-                                        <span class="pl-3"><img src="/img/priyank-bg.png" alt="Mutual Connection" class="h-6 w-8 rounded-full"></span>
+                                        <span class="pl-3"><img src="/img/priyank-bg.png" alt="Mutual Connection"
+                                                class="h-6 w-8 rounded-full"></span>
                                         <span class="text-[11px]">Priyank and 88 other mutual connections</span>
                                     </div>
-                                
+
                                     <!-- Connect Button -->
                                     <div class="flex justify-center my-3">
                                         <button class="flex items-center text-[14px] space-x-2 text-blue-400 border-1 border-blue-400 px-9 py-1.5 rounded-full 

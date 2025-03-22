@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/5c4a0b1cae.js" crossorigin="anonymous"></script>
     <title>Linkedin</title>
 </head>
@@ -16,14 +17,14 @@
             <div class="pt-[4px]">
                 <ul class="flex gap-2">
                     <li class="flex space-x-2.5">
-                        <li>
-                            <i
-                                class="fa-brands fa-linkedin-in bg-gray-300 mt-[0.5px] px-[4px] text-3xl rounded-[2px] p-[2px]"></i>
-                        </li>
-                        <li>
-                            <input type="text" placeholder="Search"
-                                class="bg-slate-700 rounded-sm h-9.5 w-45 p-2 px-3 text-gray-200">
-                        </li>
+                    <li>
+                        <i
+                            class="fa-brands fa-linkedin-in bg-gray-300 mt-[0.5px] px-[4px] text-3xl rounded-[2px] p-[2px]"></i>
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Search"
+                            class="bg-slate-700 rounded-sm h-9.5 w-45 p-2 px-3 text-gray-200">
+                    </li>
                     </li>
                     <li class="flex">
                         <ul class="flex items-center">
@@ -31,7 +32,9 @@
                                 <i class="fa-solid fa-location-dot text-gray-400"></i>
                             </li>
                             <li>
-                                <span  class="bg-slate-700 rounded-r-sm h-9.5 w-43 p-2 px-3 text-gray-200 select-none">Gandhinagar, Guj...</span>
+                                <span
+                                    class="bg-slate-700 rounded-r-sm h-9.5 w-43 p-2 px-3 text-gray-200 select-none">Gandhinagar,
+                                    Guj...</span>
                             </li>
                         </ul>
                     </li>
@@ -59,10 +62,72 @@
                         <i class="fa-solid fa-bell text-2xl pl-[22px]"></i>
                         <a href="./notifications.html"><span class="hover:text-white">Notifications</span></a>
                     </li>
-                    <li class="flex flex-col hover:text-white border-r pr-7 border-gray-600">
-                        <img src="/img/profile.jpg" alt="profile photo" class="h-6 w-6 rounded-full">
-                        <span class="hover:text-white cursor-pointer">Me &#9660;</span>
+
+                    <!-- Profile Dropdown -->
+                    <li class="relative flex flex-col hover:text-white border-r pr-7 border-gray-600"
+                        x-data="{ open: false }">
+                        <div class="flex flex-col items-center cursor-pointer" @click="open = !open">
+                            <img src="/img/profile.jpg" alt="profile photo" class="h-6 w-6 rounded-full">
+                            <span class="hover:text-white">Me &#9660;</span>
+                        </div>
+
+                        <!-- Dropdown Menu -->
+                        <div x-show="open" @click.away="open = false"
+                            class="absolute right-0 mt-14 w-62 bg-gray-900 text-white rounded-lg shadow-lg p-2.5 border border-gray-700"
+                            x-transition>
+
+                            <!-- Profile Section -->
+                            <div class="flex items-start space-x-3">
+                                <img src="/img/profile.jpg" alt="Profile Photo"
+                                    class="h-12 w-12 rounded-full border border-gray-500">
+                                <div>
+                                    <h1 class="text-[17px] font-seimbold">Ansh Soni</h1>
+                                    <p class="text-xs text-gray-300">
+                                        Ardunio Programming || IBM Qiskit || Python || Mathematics || Core Member
+                                        @GeeksforGeeks-PDEU || Computer Engineering @ PDEU'27 || 🏅 Reliance Foundation
+                                        Undergraduate Scholar
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button
+                                class="w-full mt-3 text-blue-400 text-[15px] border-2 border-blue-400 font-semibold rounded-full hover:border-blue-300 hover:text-blue-300 hover:bg-gray-800">View
+                                Profile</button>
+
+                            <!-- Account Section -->
+                            <div class="mt-4 border-t border-gray-600 pt-2 pl-2">
+                                <ul class="flex flex-col space-y-1">
+                                    <li class="text-lg font-semibold">Account</li>
+                                    <li class="text-gray-400 font-semibold hover:font-semibold hover:text-blue-400"><i
+                                            class="fa-solid fa-square text-amber-400 pr-1.5"></i>Get hired faster with
+                                        Premium</li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Settings & Privacy</a></li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Help</a></li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Language</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Manage Section -->
+                            <div class="mt-4 border-t border-gray-600 pt-2 pl-2">
+                                <ul class="flex flex-col space-y-1">
+                                    <li class="text-lg font-semibold">Manage</li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Posts & Activity</a></li>
+                                    <li class="text-[14px] cursor-pointer text-gray-400"><a href="#"
+                                            class="hover:underline">Job Posting Account</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Sign Out -->
+                            <p
+                                class="mt-3 text-[14px] border-t border-gray-600 pt-2 pl-2 text-gray-400 cursor-pointer hover:text-gray-300">
+                                Sign Out</p>
+                        </div>
                     </li>
+
                     <li class="flex flex-col hover:text-white hover:border-white">
                         <div class="pl-4">
                             <i class="fa-solid fa-ellipsis-vertical text-[20px]"></i>
@@ -91,7 +156,8 @@
                             class="h-19 w-19 rounded-full border-white border-[2px]"></li>
                     <li class="text-xl font-semibold">Ansh Soni</li>
                     <li class="text-[12px] pr-3">Ardunio Programming || IBM Qiskit || Python || Mathematics ||
-                        Core Member @GeeksFor...<span class="text-gray-500 flex flex-col">Gandhinagar, Gujarat</span></li>
+                        Core Member @GeeksFor...<span class="text-gray-500 flex flex-col">Gandhinagar, Gujarat</span>
+                    </li>
                     <li class="text-[12px] font-semibold">
                         <ul class="flex space-x-1">
                             <li>
@@ -102,15 +168,22 @@
                     </li>
                 </ul>
             </div>
-            
+
             <!-- subblock-2 -->
             <div class="bg-gray-900 rounded-[8px]">
                 <ul class="text-gray-300 font-semibold py-4">
-                    <li class="hover:bg-gray-800"><i class="fa-solid fa-list-ul px-5 py-3.5 text-xl"></i><span>Preferences</span></li>
-                    <li class="hover:bg-gray-800"><i class="fa-solid fa-bookmark px-5 py-3.5 text-xl"></i><span>My jobs</span></li>
-                    <li class="hover:bg-gray-800"><i class="fa-solid fa-cube text-yellow-500 px-5 py-3.5 text-xl"></i><span>My Career Insights</span></li>
-                    <li class="flex place-content-center py-4"><hr class="w-65 text-gray-700"></li>
-                    <li class="text-blue-400 hover:bg-gray-800"><i class="fa-solid fa-pen-to-square px-5 py-3.5 text-xl"></i><span>Post a free job</span></li>
+                    <li class="hover:bg-gray-800"><i
+                            class="fa-solid fa-list-ul px-5 py-3.5 text-xl"></i><span>Preferences</span></li>
+                    <li class="hover:bg-gray-800"><i class="fa-solid fa-bookmark px-5 py-3.5 text-xl"></i><span>My
+                            jobs</span></li>
+                    <li class="hover:bg-gray-800"><i
+                            class="fa-solid fa-cube text-yellow-500 px-5 py-3.5 text-xl"></i><span>My Career
+                            Insights</span></li>
+                    <li class="flex place-content-center py-4">
+                        <hr class="w-65 text-gray-700">
+                    </li>
+                    <li class="text-blue-400 hover:bg-gray-800"><i
+                            class="fa-solid fa-pen-to-square px-5 py-3.5 text-xl"></i><span>Post a free job</span></li>
                 </ul>
             </div>
 
@@ -151,14 +224,15 @@
         </div>
 
         <!-- block-2 -->
-         <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4">
             <!-- subblock-1 -->
-             <div>
+            <div>
                 <ul class="flex flex-col bg-gray-900 rounded-[8px] gap-3 pt-6">
                     <li class="px-6">
                         <ul>
                             <li class="text-xl text-gray-200 font-semibold">Top job picks for you</li>
-                            <li class="text-gray-400 text-[14px]">Based on your profile, preferences, and activity like applies, searches, and saves</li>
+                            <li class="text-gray-400 text-[14px]">Based on your profile, preferences, and activity like
+                                applies, searches, and saves</li>
                         </ul>
                     </li>
                     <li class="px-6 border-b-2 border-gray-800">
@@ -168,13 +242,21 @@
                             </li>
                             <li>
                                 <ul class="flex flex-col">
-                                    <li><a href="#" class="hover:underline text-blue-400 hover:decoration-2 font-semibold">Web Developer Intern</a></li>
-                                    <li class="text-[14px] font-semibold text-gray-300">MN Solutions • Gandhinagar, Gujarat, India (Hybrid)</li>
-                                    <li class="flex items-center p-1"><img src="/img/priyank-bg.png" alt="example pic" class="h-5 w-5"><span class="text-[12px] pl-1 text-gray-400">1 connection works here</span></li>
-                                    <li class="text-gray-400 text-[12px] pb-1"><span class="font-semibold">Viewed</span> • Promoted</li>
+                                    <li><a href="#"
+                                            class="hover:underline text-blue-400 hover:decoration-2 font-semibold">Web
+                                            Developer Intern</a></li>
+                                    <li class="text-[14px] font-semibold text-gray-300">MN Solutions • Gandhinagar,
+                                        Gujarat, India (Hybrid)</li>
+                                    <li class="flex items-center p-1"><img src="/img/priyank-bg.png" alt="example pic"
+                                            class="h-5 w-5"><span class="text-[12px] pl-1 text-gray-400">1 connection
+                                            works here</span></li>
+                                    <li class="text-gray-400 text-[12px] pb-1"><span class="font-semibold">Viewed</span>
+                                        • Promoted</li>
                                 </ul>
                             </li>
-                            <li class="text-gray-300 pl-88"><i class="fa-solid fa-xmark hover:bg-gray-800 py-1.5 px-2 rounded-full text-lg"></i></li>
+                            <li class="text-gray-300 pl-88"><i
+                                    class="fa-solid fa-xmark hover:bg-gray-800 py-1.5 px-2 rounded-full text-lg"></i>
+                            </li>
                         </ul>
                     </li>
                     <li class="px-6 border-b-2 border-gray-800">
@@ -184,13 +266,21 @@
                             </li>
                             <li>
                                 <ul class="flex flex-col">
-                                    <li><a href="#" class="hover:underline text-blue-400 hover:decoration-2 font-semibold">Python Developer Intern</a></li>
-                                    <li class="text-[14px] font-semibold text-gray-300">Morgan Maxwell • India (Remote)</li>
-                                    <li class="flex items-center p-1"><img src="/img/panth-bg.png" alt="example pic" class="h-5 w-5"><span class="text-[12px] pl-1 text-gray-400">1 connection works here</span></li>
-                                    <li class="text-gray-400 text-[12px] pb-1"><span class="font-semibold">Viewed</span> • Promoted</li>
+                                    <li><a href="#"
+                                            class="hover:underline text-blue-400 hover:decoration-2 font-semibold">Python
+                                            Developer Intern</a></li>
+                                    <li class="text-[14px] font-semibold text-gray-300">Morgan Maxwell • India (Remote)
+                                    </li>
+                                    <li class="flex items-center p-1"><img src="/img/panth-bg.png" alt="example pic"
+                                            class="h-5 w-5"><span class="text-[12px] pl-1 text-gray-400">1 connection
+                                            works here</span></li>
+                                    <li class="text-gray-400 text-[12px] pb-1"><span class="font-semibold">Viewed</span>
+                                        • Promoted</li>
                                 </ul>
                             </li>
-                            <li class="text-gray-300 pl-117"><i class="fa-solid fa-xmark hover:bg-gray-800 py-1.5 px-2 rounded-full text-lg"></i></li>
+                            <li class="text-gray-300 pl-117"><i
+                                    class="fa-solid fa-xmark hover:bg-gray-800 py-1.5 px-2 rounded-full text-lg"></i>
+                            </li>
                         </ul>
                     </li>
                     <li class="px-6 border-b-2 border-gray-800">
@@ -200,18 +290,28 @@
                             </li>
                             <li>
                                 <ul class="flex flex-col">
-                                    <li><a href="#" class="hover:underline text-blue-400 hover:decoration-2 font-semibold">Data Science Intern</a></li>
-                                    <li class="text-[14px] font-semibold text-gray-300">Daniel Gallego • India (Remote)</li>
-                                    <li class="flex items-center p-1"><img src="/img/yug-bg.png" alt="example pic" class="h-5 w-5"><span class="text-[12px] pl-1 text-gray-400">1 connection works here</span></li>
-                                    <li class="text-gray-400 text-[12px] pb-1"><span class="font-semibold">Viewed</span> • Promoted</li>
+                                    <li><a href="#"
+                                            class="hover:underline text-blue-400 hover:decoration-2 font-semibold">Data
+                                            Science Intern</a></li>
+                                    <li class="text-[14px] font-semibold text-gray-300">Daniel Gallego • India (Remote)
+                                    </li>
+                                    <li class="flex items-center p-1"><img src="/img/yug-bg.png" alt="example pic"
+                                            class="h-5 w-5"><span class="text-[12px] pl-1 text-gray-400">1 connection
+                                            works here</span></li>
+                                    <li class="text-gray-400 text-[12px] pb-1"><span class="font-semibold">Viewed</span>
+                                        • Promoted</li>
                                 </ul>
                             </li>
-                            <li class="text-gray-300 pl-120"><i class="fa-solid fa-xmark hover:bg-gray-800 py-1.5 px-2 rounded-full text-lg"></i></li>
+                            <li class="text-gray-300 pl-120"><i
+                                    class="fa-solid fa-xmark hover:bg-gray-800 py-1.5 px-2 rounded-full text-lg"></i>
+                            </li>
                         </ul>
                     </li>
-                    <li class="flex place-content-center pb-3 font-semibold text-gray-300 hover:bg-gray-800 mt-[-12px] pt-3 hover:rounded-b-[8px]">Show all<i class="fa-solid fa-arrow-right pl-2 mt-[6px]"></i></li>
+                    <li
+                        class="flex place-content-center pb-3 font-semibold text-gray-300 hover:bg-gray-800 mt-[-12px] pt-3 hover:rounded-b-[8px]">
+                        Show all<i class="fa-solid fa-arrow-right pl-2 mt-[6px]"></i></li>
                 </ul>
-             </div>
+            </div>
 
 
             <!-- subblock-2 -->
@@ -220,7 +320,9 @@
                     <li class="px-6">
                         <ul class="flex place-content-evenly gap-140">
                             <li class="text-xl text-gray-200 font-semibold">Recent job searches</li>
-                            <li class="text-gray-400 text-[16px] pb-1 hover:bg-gray-800 hover:text-gray-200 px-2.5 py-1 rounded-[4px]">clear</li>
+                            <li
+                                class="text-gray-400 text-[16px] pb-1 hover:bg-gray-800 hover:text-gray-200 px-2.5 py-1 rounded-[4px]">
+                                clear</li>
                         </ul>
                     </li>
                     <li class="px-6 border-b-2 border-gray-800 pb-2">
@@ -228,7 +330,8 @@
                             <li>
                                 <ul class="flex flex-col">
                                     <li class="text-gray-200 font-semibold">Python Developer</li>
-                                    <li class="text-[14px] font-semibold text-gray-400">Gandhinagar, Gujarat, India • Internship • Hybrid</li>
+                                    <li class="text-[14px] font-semibold text-gray-400">Gandhinagar, Gujarat, India •
+                                        Internship • Hybrid</li>
                                 </ul>
                             </li>
                         </ul>
@@ -238,7 +341,8 @@
                             <li>
                                 <ul class="flex flex-col">
                                     <li class="text-gray-200 font-semibold">Web Developement</li>
-                                    <li class="text-[14px] font-semibold text-gray-400">Maharashtra, Mumbai, India • Internship • On-site</li>
+                                    <li class="text-[14px] font-semibold text-gray-400">Maharashtra, Mumbai, India •
+                                        Internship • On-site</li>
                                 </ul>
                             </li>
                         </ul>
@@ -248,15 +352,18 @@
                             <li>
                                 <ul class="flex flex-col">
                                     <li class="text-gray-200 font-semibold">Data Science</li>
-                                    <li class="text-[14px] font-semibold text-gray-400">Ahmedabad, Gujarat, India • Internship • Remote</li>
+                                    <li class="text-[14px] font-semibold text-gray-400">Ahmedabad, Gujarat, India •
+                                        Internship • Remote</li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li class="flex place-content-center pb-3 font-semibold text-gray-300 hover:bg-gray-800 mt-[-12px] pt-3 hover:rounded-b-[8px]">Show all<i class="fa-solid fa-arrow-right pl-2 mt-[6px]"></i></li>
+                    <li
+                        class="flex place-content-center pb-3 font-semibold text-gray-300 hover:bg-gray-800 mt-[-12px] pt-3 hover:rounded-b-[8px]">
+                        Show all<i class="fa-solid fa-arrow-right pl-2 mt-[6px]"></i></li>
                 </ul>
-             </div>
-         </div>
+            </div>
+        </div>
     </div>
 </body>
 
