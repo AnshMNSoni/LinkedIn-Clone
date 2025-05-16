@@ -303,9 +303,6 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
-  }
   .left-1\/2 {
     left: calc(1/2 * 100%);
   }
@@ -468,9 +465,6 @@
   .mt-\[6px\] {
     margin-top: 6px;
   }
-  .mr-0 {
-    margin-right: calc(var(--spacing) * 0);
-  }
   .mr-0\.5 {
     margin-right: calc(var(--spacing) * 0.5);
   }
@@ -483,17 +477,11 @@
   .mb-\[-5px\] {
     margin-bottom: -5px;
   }
-  .ml-2 {
-    margin-left: calc(var(--spacing) * 2);
-  }
   .ml-2\.5 {
     margin-left: calc(var(--spacing) * 2.5);
   }
   .ml-26 {
     margin-left: calc(var(--spacing) * 26);
-  }
-  .ml-\[-5px\] {
-    margin-left: -5px;
   }
   .ml-\[-12px\] {
     margin-left: -12px;
@@ -600,9 +588,6 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
-  .h-9 {
-    height: calc(var(--spacing) * 9);
-  }
   .h-9\.5 {
     height: calc(var(--spacing) * 9.5);
   }
@@ -663,9 +648,6 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -680,9 +662,6 @@
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
-  }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
   }
   .w-11 {
     width: calc(var(--spacing) * 11);
@@ -729,17 +708,11 @@
   .w-75 {
     width: calc(var(--spacing) * 75);
   }
-  .w-99 {
-    width: calc(var(--spacing) * 99);
-  }
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
   .w-108 {
     width: calc(var(--spacing) * 108);
-  }
-  .w-109 {
-    width: calc(var(--spacing) * 109);
   }
   .w-full {
     width: 100%;
@@ -851,10 +824,6 @@
   .translate-full {
     --tw-translate-x: 100%;
     --tw-translate-y: 100%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-x-1\/2 {
@@ -1168,9 +1137,6 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
   .gap-1\.5 {
     gap: calc(var(--spacing) * 1.5);
   }
@@ -1188,9 +1154,6 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
-  }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
   }
   .gap-5\.5 {
     gap: calc(var(--spacing) * 5.5);
@@ -1235,13 +1198,6 @@
       --tw-space-y-reverse: 0;
       margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
-  .space-y-3 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-y-3\.5 {
@@ -2005,9 +1961,6 @@
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
-  }
   .pt-5\.5 {
     padding-top: calc(var(--spacing) * 5.5);
   }
@@ -2041,20 +1994,11 @@
   .pr-7 {
     padding-right: calc(var(--spacing) * 7);
   }
-  .pr-18 {
-    padding-right: calc(var(--spacing) * 18);
-  }
   .pr-18\.5 {
     padding-right: calc(var(--spacing) * 18.5);
   }
-  .pr-19 {
-    padding-right: calc(var(--spacing) * 19);
-  }
   .pr-19\.5 {
     padding-right: calc(var(--spacing) * 19.5);
-  }
-  .pr-26 {
-    padding-right: calc(var(--spacing) * 26);
   }
   .pr-26\.5 {
     padding-right: calc(var(--spacing) * 26.5);
@@ -2190,9 +2134,6 @@
   }
   .text-\[9px\] {
     font-size: 9px;
-  }
-  .text-\[10px\] {
-    font-size: 10px;
   }
   .text-\[11px\] {
     font-size: 11px;
@@ -2909,13 +2850,6 @@
       }
     }
   }
-  .hover\:bg-gray-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-400);
-      }
-    }
-  }
   .hover\:bg-gray-600 {
     &:hover {
       @media (hover: hover) {
@@ -3027,20 +2961,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-gray-300);
-      }
-    }
-  }
-  .hover\:text-gray-400 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-gray-400);
-      }
-    }
-  }
-  .hover\:text-gray-800 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-gray-800);
       }
     }
   }
