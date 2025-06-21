@@ -39,6 +39,10 @@
 ## 🔎 Future Work:
 - To make this Website responsive
 
+---
+### 🎉 Credits: LinkedIn 
+---
+
 ## 📢 Connect with Me
 If you found this project helpful or have any suggestions, feel free to connect:
 #### - 🔗 [LinkedIn](https://www.linkedin.com/in/anshmnsoni)
