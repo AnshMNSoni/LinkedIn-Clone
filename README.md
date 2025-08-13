@@ -37,7 +37,7 @@
 3. Open `index.html` in your browser.
 
 ## 🔎 Future Work:
-- To make this Website responsive
+- To make this Website responsive.
 
 ---
 ### 🎉 Credits: LinkedIn 
