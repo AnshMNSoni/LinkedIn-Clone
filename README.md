@@ -4,6 +4,7 @@
 
 ## 📌 Features
 - ✅ Clean and Modern UI ✨
+- ✅ Search Functionality by Post
 - ✅ Interactive Sections for a Complete User Experience 🔥
 - ✅ Tailwind CSS for Faster Styling 🎨
 
