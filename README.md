@@ -1,14 +1,14 @@
 # Ultimate LinkedIn Clone (Frontend Only)
 
-🚀 **Ultimate LinkedIn Clone** built using **HTML, Tailwind CSS, and JavaScript**. This project replicates LinkedIn's core frontend features, including Home, Network, Jobs, Notifications, and Profile sections.
+**Ultimate LinkedIn Clone** built using **HTML, Tailwind CSS, and JavaScript**. This project replicates LinkedIn's core frontend features, including Home, Network, Jobs, Notifications, and Profile sections.
 
-## 📌 Features
-- ✅ Clean and Modern UI ✨
-- ✅ Search Functionality by Post
-- ✅ Interactive Sections for a Complete User Experience 🔥
-- ✅ Tailwind CSS for Faster Styling 🎨
+## Features
+- Clean and Modern UI
+- Search Functionality by Post
+- Interactive Sections for a Complete User Experience
+- Tailwind CSS for Faster Styling
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **HTML** - Structuring the webpage
 - **Tailwind CSS** - Styling with utility-first approach
 - **JavaScript** - Adding interactivity
@@ -26,7 +26,7 @@
 ## Notification Section:
 ![image](https://github.com/user-attachments/assets/055a698c-064c-45c3-bd66-273209d4f184)
 
-## 🚀 How to Run Locally
+## How to Run Locally
 1. Clone the repository:
    ```sh
    git clone https://github.com/AnshMNSoni/Linkedin-Clone.git
@@ -37,21 +37,21 @@
    ```
 3. Open `index.html` in your browser.
 
-## 🔎 Future Work:
+## Future Work:
 - To make this Website responsive.
 
 ---
-### 🎉 Credits: LinkedIn 
+### Credits: LinkedIn 
 ---
 
-# 📢 Connect with Me
+# Connect with Me
 If you found this project helpful or have any suggestions, feel free to connect:
 
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-anshmnsoni-0077B5.svg?logo=linkedin)](https://www.linkedin.com/in/anshmnsoni)  
 - [![GitHub](https://img.shields.io/badge/GitHub-AnshMNSoni-181717.svg?logo=github)](https://github.com/AnshMNSoni)
 - [![Reddit](https://img.shields.io/badge/Reddit-u/AnshMNSoni-FF4500.svg?logo=reddit)](https://www.reddit.com/user/AnshMNSoni)
 
-## 📜 License
+## License
 This project is licensed under the [MIT License](LICENSE).
 
-### Thankyou 💫
+### Thankyou
