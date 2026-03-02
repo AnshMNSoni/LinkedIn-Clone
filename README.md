@@ -40,11 +40,7 @@
 ## Future Work:
 - To make this Website responsive.
 
----
-### Credits: LinkedIn 
----
-
-# Connect with Me
+## Connect with Me
 If you found this project helpful or have any suggestions, feel free to connect:
 
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-anshmnsoni-0077B5.svg?logo=linkedin)](https://www.linkedin.com/in/anshmnsoni)  
