@@ -1,4 +1,61 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+/* Hamburger menu button - hidden by default, shown via responsive classes */
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: #d1d5db;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+/* Mobile Navigation Overlay */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #111827;
+    border-bottom: 1px solid #4b5563;
+    z-index: 49;
+    padding: 16px;
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-nav li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #9ca3af;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mobile-nav li:hover {
+    background: #1f2937;
+    color: #fff;
+}
+
+.mobile-nav li i {
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.mobile-nav a {
+    color: inherit;
+    text-decoration: none;
+}
