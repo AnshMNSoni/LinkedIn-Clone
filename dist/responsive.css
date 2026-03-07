@@ -1,0 +1,420 @@
+/* ============================================
+   LinkedIn Clone - Responsive CSS
+   ============================================ */
+
+/* --- Hamburger Menu Button --- */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #d1d5db;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+/* --- Mobile Nav Overlay --- */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #111827;
+    border-bottom: 1px solid #4b5563;
+    z-index: 49;
+    padding: 16px;
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-nav li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #9ca3af;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mobile-nav li:hover {
+    background: #1f2937;
+    color: #fff;
+}
+
+.mobile-nav li i {
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.mobile-nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ============================================
+   DESKTOP (> 1024px) — No changes needed
+   ============================================ */
+
+/* ============================================
+   TABLET (768px – 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+    /* --- Navbar: condense nav items, hide text labels --- */
+    nav .desktop-nav-links span {
+        display: none;
+    }
+
+    nav .desktop-nav-links {
+        padding-left: 2rem;
+        gap: 1rem;
+    }
+
+    nav .desktop-nav-links > li {
+        gap: 0.25rem;
+    }
+
+    /* Hide search bar width reduction */
+    nav input[type="text"] {
+        width: 140px;
+    }
+
+    /* Hide the premium CTA and business in nav */
+    nav .nav-premium-cta {
+        display: none;
+    }
+
+    nav .nav-business {
+        display: none;
+    }
+
+    /* --- index.html: Main layout --- */
+    .main-layout {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .left-sidebar {
+        display: none;
+    }
+
+    .center-feed {
+        flex: 1;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .right-sidebar {
+        flex: 0 0 260px;
+    }
+
+    /* --- job.html layout --- */
+    .job-layout {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .job-left-sidebar {
+        display: none;
+    }
+
+    .job-center {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* --- network.html layout --- */
+    .network-layout {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .network-left-sidebar {
+        display: none;
+    }
+
+    .network-center {
+        flex: 1;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* Profile cards: 2 per row */
+    .profile-cards-row {
+        flex-wrap: wrap;
+    }
+
+    .profile-cards-row > li {
+        flex: 0 0 calc(50% - 4px);
+        max-width: calc(50% - 4px);
+    }
+
+    /* --- notifications.html layout --- */
+    .notif-layout {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .notif-left-sidebar {
+        display: none;
+    }
+
+    .notif-center {
+        flex: 1;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .notif-right-sidebar {
+        display: none;
+    }
+
+    /* Fix fixed-width elements */
+    .center-feed button[class*="w-108"],
+    .start-post-btn {
+        width: 100% !important;
+    }
+
+    /* Fix invitation user info overflow */
+    .network-center li[class*="pr-"] {
+        padding-right: 0 !important;
+    }
+
+    /* Fix large gap values */
+    .network-center ul[class*="gap-155"],
+    .network-center ul[class*="gap-135"],
+    .network-center ul[class*="gap-140"],
+    .network-center ul[class*="gap-65"] {
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    /* Fix job page large gaps */
+    .job-center ul[class*="gap-140"] {
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    /* Fix the sort bar width */
+    .center-feed hr[class*="w-100"] {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   MOBILE (< 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    /* --- Navbar --- */
+    .hamburger-btn {
+        display: block;
+    }
+
+    nav .desktop-nav-links {
+        display: none !important;
+    }
+
+    nav > div {
+        justify-content: space-between;
+        padding: 0 12px;
+    }
+
+    nav input[type="text"] {
+        width: 120px;
+        font-size: 13px;
+    }
+
+    /* Job page: hide location bar on mobile */
+    nav .job-location-bar {
+        display: none;
+    }
+
+    /* --- All pages: Main content stacks vertically --- */
+    .main-layout,
+    .job-layout,
+    .network-layout,
+    .notif-layout {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 8px;
+        gap: 12px;
+    }
+
+    /* --- Sidebars --- */
+    .left-sidebar,
+    .job-left-sidebar,
+    .network-left-sidebar,
+    .notif-left-sidebar {
+        display: none;
+    }
+
+    .right-sidebar,
+    .notif-right-sidebar {
+        display: none;
+    }
+
+    /* --- Center feed: full width --- */
+    .center-feed,
+    .job-center,
+    .network-center,
+    .notif-center {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* --- Fix fixed-width elements --- */
+
+    /* Start Post button */
+    .center-feed button[class*="w-108"],
+    .start-post-btn {
+        width: 100% !important;
+    }
+
+    /* Post card widths */
+    .center-feed .post {
+        width: 100%;
+    }
+
+    /* Fix the sort bar */
+    .center-feed hr[class*="w-100"] {
+        width: 100%;
+    }
+
+    /* Fix post action buttons */
+    .post ul[class*="place-content-evenly"] {
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: space-around;
+    }
+
+    .post ul[class*="place-content-evenly"] li {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    /* Hide reaction text, keep icons */
+    .post ul[class*="place-content-evenly"] li span {
+        display: none;
+    }
+
+    /* Fix card header gaps */
+    .post li ul[class*="gap-43"],
+    .post li ul[class*="gap-38"] {
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    /* Fix fixed pl values on engagement stats */
+    .post li[class*="pl-19"],
+    .post li[class*="pl-34"] {
+        padding-left: 4px !important;
+    }
+
+    /* --- Notification page fixes --- */
+    .notif-center li[class*="w-100"] {
+        width: 100% !important;
+    }
+
+    .notif-center ul[class*="px-6"] {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* --- Network page: Profile cards --- */
+    .profile-cards-row {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .profile-cards-row > li {
+        flex: 0 0 calc(50% - 4px);
+        max-width: calc(50% - 4px);
+    }
+
+    /* Fix network large gap values */
+    .network-center ul[class*="gap-155"],
+    .network-center ul[class*="gap-135"],
+    .network-center ul[class*="gap-140"],
+    .network-center ul[class*="gap-65"],
+    .network-center ul[class*="gap-23"],
+    .network-center ul[class*="gap-36"],
+    .network-center ul[class*="gap-41"],
+    .network-center ul[class*="gap-39"],
+    .network-center ul[class*="gap-31"] {
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    /* Fix network invitation padding */
+    .network-center li[class*="pr-19"],
+    .network-center li[class*="pr-26"],
+    .network-center li[class*="pr-18"] {
+        padding-right: 0 !important;
+    }
+
+    /* --- Job page fixes --- */
+    .job-center ul[class*="gap-140"] {
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    /* Fix job listing close button alignment */
+    .job-center li[class*="pl-88"],
+    .job-center li[class*="pl-117"],
+    .job-center li[class*="pl-120"] {
+        padding-left: 8px !important;
+    }
+
+    /* --- Like hover popup: dont show on mobile --- */
+    .group:hover .group-hover\\:opacity-100 {
+        opacity: 0 !important;
+        transform: scale(0) !important;
+    }
+
+    /* --- Footer quick links --- */
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+}
+
+/* ============================================
+   VERY SMALL MOBILE (< 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    nav input[type="text"] {
+        width: 100px;
+    }
+
+    /* Network cards: single column */
+    .profile-cards-row > li {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Post action buttons: show only icons */
+    .post ul[class*="place-content-evenly"] li {
+        font-size: 11px;
+        padding: 4px;
+    }
+}
