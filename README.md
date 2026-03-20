@@ -1,4 +1,4 @@
-# Ultimate LinkedIn Clone (Frontend Only)
+# Ultimate LinkedIn Clone
 
 **Ultimate LinkedIn Clone** built using **HTML, Tailwind CSS, and JavaScript**. This project replicates LinkedIn's core frontend features, including Home, Network, Jobs, Notifications, and Profile sections.
 
