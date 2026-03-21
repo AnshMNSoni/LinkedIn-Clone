@@ -37,6 +37,9 @@
    ```
 3. Open `index.html` in your browser.
 
+## Issues:
+- [GitHub Issues](https://github.com/AnshMNSoni/Linkedin-Clone/issues)
+
 ## Connect with Me
 If you found this project helpful or have any suggestions, feel free to connect:
 
