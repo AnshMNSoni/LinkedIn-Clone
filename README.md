@@ -37,9 +37,6 @@
    ```
 3. Open `index.html` in your browser.
 
-## Future Work:
-- To make this Website responsive.
-
 ## Connect with Me
 If you found this project helpful or have any suggestions, feel free to connect:
 
